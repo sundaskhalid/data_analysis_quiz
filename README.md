@@ -2,6 +2,8 @@
 
 A Python-based quiz application to test data manipulation and wrangling skills using Pandas and NumPy.
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ## Features
 - 10 Questions across 5 levels (Beginner, Intermediate, Advanced, Expert, Master).
 - Tracks score and assesses skill level based on performance.
