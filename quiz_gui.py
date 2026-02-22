@@ -94,11 +94,14 @@ class QuizGUI:
                 padx=20, pady=15, anchor="w",
                 indicatoron=0, 
                 relief="flat", bd=0, highlightthickness=1,
-                highlightbackground=self.colors["surface"]
+                highlightbackground=self.colors["surface"],
+                takefocus=True
             )
             rb.pack(fill=tk.X, pady=8) # Increased spacing
             rb.bind("<Enter>", lambda e, r=rb: self.on_hover(r))
             rb.bind("<Leave>", lambda e, r=rb: self.on_leave(r))
+            # Fix responsiveness by binding click explicitly to variable change
+            rb.bind("<Button-1>", lambda e, r=rb: self.on_click(r))
             self.option_buttons.append(rb)
 
         # Submit Button (Modern "Dark Form" style)
@@ -126,6 +129,11 @@ class QuizGUI:
             bg=self.colors["bg"], fg=self.colors["text_dim"]
         )
         self.score_label.pack(side=tk.BOTTOM, pady=20)
+
+    def on_click(self, rb):
+        # Force the radio variable to update and update focus
+        self.radio_var.set(rb.cget("value"))
+        rb.focus_set()
 
     def on_hover(self, rb):
         # Change highlight if not selected
