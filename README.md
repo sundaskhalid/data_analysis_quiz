@@ -1,4 +1,4 @@
-# Data Analysis Quiz App
+# Python Data Analysis Quiz App
 
 A Python-based quiz application to test data manipulation and wrangling skills using Pandas and NumPy.
 
@@ -16,13 +16,19 @@ A Python-based quiz application to test data manipulation and wrangling skills u
 
 ## How to Run
 
-### Option 1: Graphical User Interface (GUI)
-This is the recommended way to take the quiz.
+### Option 1: Web Interface (Browser)
+This is the modern way to take the quiz directly in your web browser.
+```bash
+streamlit run quiz_web.py
+```
+
+### Option 2: Graphical User Interface (GUI)
+This is a desktop version using Tkinter.
 ```bash
 python quiz_gui.py
 ```
 
-### Option 2: Command Line Interface (CLI)
+### Option 3: Command Line Interface (CLI)
 Run the quiz directly in your terminal.
 ```bash
 python quiz_app.py

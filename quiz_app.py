@@ -94,7 +94,7 @@ class DataAnalysisQuiz:
     def run_quiz(self, mock_input=None):
         """Runs the quiz in CLI mode. If mock_input is provided, it uses that instead of interactive input."""
         print("\n" + "="*50)
-        print("   🚀 DATA ANALYSIS QUIZ: TEST YOUR SKILLS! 🚀")
+        print("   🚀 PYTHON DATA ANALYSIS QUIZ: TEST YOUR SKILLS! 🚀")
         print("="*50)
         print("Instructions: Enter the letter (A, B, C, or D) for your choice.\n")
 
